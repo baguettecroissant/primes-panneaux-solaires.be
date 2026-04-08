@@ -1,0 +1,21 @@
+# primes-panneaux-solaires.be
+
+> Portail d'information sur les primes et aides à l'installation de panneaux solaires en Belgique.
+
+## À propos
+Ce site fournit des informations actualisées sur les subsides, primes et certificats verts disponibles dans les trois régions belges (Wallonie, Bruxelles-Capitale et Flandre) pour l'installation de panneaux photovoltaïques résidentiels.
+
+## Contenu principal
+- Pages de primes par commune (657 communes francophones)
+- Guides régionaux détaillés (Wallonie, Bruxelles, Flandre)
+- 8 guides piliers sur les aspects financiers et techniques
+- Comparatif de marques de panneaux solaires
+- Simulateur de rentabilité interactif
+- FAQ complète
+- Formulaire de demande de devis gratuits
+
+## Public cible
+Propriétaires belges (25-65 ans) envisageant l'installation de panneaux solaires sur leur habitation.
+
+## Langue
+Français (Belgique)
