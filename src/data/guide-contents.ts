@@ -3,20 +3,23 @@
 
 export const guideContents: Record<string, string> = {
   'primes-panneaux-solaires-wallonie-2025': `
-<h2>Tour d'horizon des aides en Wallonie en 2026</h2>
-<p>La Région Wallonne a considérablement modifié son système d'aides au photovoltaïque depuis 2014, année de la suppression de la prime directe à l'installation. En 2026, le paysage des aides s'articule autour de trois piliers : les certificats verts, le Rénoprêt à taux zéro et la TVA réduite. Si la prime forfaitaire a disparu, les mécanismes en place restent suffisamment avantageux pour garantir un retour sur investissement attractif.</p>
+<h2>Tour d’horizon des aides en Wallonie en 2026</h2>
+<p>La situation des aides wallonnes pour le photovoltaïque a <strong>radicalement changé au 1er janvier 2024</strong>. Ce qui existait encore en 2023 — certificats verts résidentiels, tarif prosumer compensé, compteur réversible — a été supprimé pour les nouvelles installations. En 2026, le soutien se limite au Rénoprêt à taux 0% et à la TVA réduite. La clé de la rentabilité est désormais l’autoconsommation.</p>
 
-<h2>Le système des certificats verts wallons</h2>
-<p>Le certificat vert (CV) est un titre immatériel octroyé pour chaque mégawattheure (MWh) d'électricité verte produite. En Wallonie, les installations photovoltaïques résidentielles de moins de 10 kWc bénéficient de l'octroi de CV pendant 10 ans à compter de la date de mise en service.</p>
-<p>La valeur d'un certificat vert wallon se situe autour de 65€ en 2026. Pour une installation résidentielle typique de 6 kWc produisant environ 5 400 kWh/an (soit 5,4 MWh), cela représente environ 350€ de revenus annuels, soit 3 500€ sur la durée totale de 10 ans.</p>
-<p>Pour en bénéficier, il faut faire certifier votre installation par un organisme agréé et introduire votre dossier auprès de la CWaPE (Commission Wallonne pour l'Énergie). Les CV sont ensuite vendus à votre fournisseur d'énergie, qui est tenu de les racheter à un prix minimum garanti.</p>
+<div style="background:#FEF2F2;border-left:4px solid #DC2626;padding:16px 20px;border-radius:8px;margin:16px 0">
+<p style="color:#991B1B;font-weight:700;margin:0 0 8px">⚠️ Point clé pour les nouvelles installations 2024+</p>
+<p style="color:#7F1D1D;margin:0">Les <strong>certificats verts</strong> présentés dans de nombreux articles datent d'avant 2024. Ils <strong>ne sont plus accessibles aux nouvelles installations résidentielles</strong> (≤ 10 kWc) conclues après le 31 décembre 2023. Source : CWaPE, energie.wallonie.be.</p>
+</div>
 
-<h3>Comment valoriser vos certificats verts ?</h3>
-<p>Deux options s'offrent à vous pour valoriser vos certificats verts :</p>
+<h2>Les certificats verts wallons : historique et situation actuelle</h2>
+<p>Jusqu'en 2023, le système de certificats verts (CV) était le mécanisme central en Wallonie. La CWaPE octroyait 1 CV par MWh produit sur 10 ans. Mais ce système a été supprimé pour les nouvelles installations résidentielles depuis le <strong>1er janvier 2024</strong>.</p>
 <ul>
-<li><strong>La vente directe :</strong> vous vendez vos CV à votre fournisseur d'énergie au prix du marché. Ce prix fluctue mais reste encadré par un prix minimum garanti.</li>
-<li><strong>Via un intermédiaire :</strong> certaines sociétés se chargent de la gestion et de la revente de vos CV moyennant une commission. Plus simple, mais légèrement moins rentable.</li>
+<li><strong>Installations antérieures à fin 2023 :</strong> les droits acquis sont maintenus. Les propriétaires continuent de percevoir leurs CV selon les modalités d'origine.</li>
+<li><strong>Nouveaux projets (2024+) :</strong> zéro certificat vert. Plus de compteur réversible. Plus de tarif prosumer.</li>
 </ul>
+<p>La rentabilité repose donc entièrement sur deux leviers : <strong>l'autoconsommation</strong> (chaque kWh autoconsommé = environ 0,35€ évités) et le <strong>tarif d'injection</strong> négocié avec votre fournisseur pour le surplus injecté (environ 3–6 ct€/kWh).</p>
+
+
 
 <h2>Le Rénoprêt : financement à taux zéro</h2>
 <p>Le Rénoprêt est proposé par la Société Wallonne du Crédit Social (SWCS) et permet de financer des travaux de rénovation énergétique, dont l'installation de panneaux solaires, à un taux d'intérêt de 0%.</p>
@@ -58,39 +61,37 @@ export const guideContents: Record<string, string> = {
 <ul>
 <li>Logement situé en Région Wallonne</li>
 <li>Installation réalisée par un installateur certifié Rescert</li>
-<li>Puissance maximale de 10 kWc pour le résidentiel</li>
-<li>Compteur communicant (bidirectionnel) obligatoire</li>
-<li>Certification de l'installation par un organisme agréé</li>
+<li>Compteur communicant (double flux) obligatoire</li>
 <li>Logement de plus de 10 ans pour la TVA à 6%</li>
 </ul>
 
-<h2>Simulation chiffrée : l'exemple d'une installation à Namur</h2>
-<p>Prenons l'exemple d'un ménage namurois installant 6 kWc de panneaux solaires sur une toiture orientée sud :</p>
+<h2>Simulation chiffrée : l'exemple d'une installation à Namur (2026)</h2>
+<p>Prenons l'exemple d'un ménage namurois installant 6 kWc de panneaux solaires sur une toiture orientée sud en 2026 :</p>
 <ul>
 <li><strong>Coût d'installation :</strong> 7 200€ (TVA 6% incluse)</li>
 <li><strong>Production annuelle :</strong> ~5 400 kWh</li>
-<li><strong>Économie sur la facture :</strong> ~1 050€/an (autoconsommation 60%)</li>
-<li><strong>Certificats verts :</strong> ~350€/an pendant 10 ans</li>
-<li><strong>Tarif prosumer :</strong> -400€/an</li>
-<li><strong>Bénéfice net annuel :</strong> ~1 000€</li>
-<li><strong>Retour sur investissement :</strong> ~7 ans</li>
-<li><strong>Gain sur 25 ans :</strong> ~18 000€</strong></li>
+<li><strong>Autoconsommation (60%) :</strong> 3 240 kWh × 0,35€ = ~1 134€ économisés/an</li>
+<li><strong>Injection (40%) :</strong> 2 160 kWh × 0,04€ = ~86€/an (tarif d'injection)</li>
+<li><strong>Certificats verts :</strong> 0€ (supprimés pour nouvelles installations depuis jan. 2024)</li>
+<li><strong>Bilan net annuel :</strong> ~1 220€</li>
+<li><strong>Retour sur investissement :</strong> ~6–8 ans</li>
+<li><strong>Gain sur 25 ans :</strong> ~22 000€</li>
 </ul>
+<p>La rentabilité reste attractive grâce à la baisse du coût des panneaux et à la hausse des prix de l'électricité, même sans aides directes.</p>
 
-<h2>Démarches administratives pas à pas</h2>
-<p>Voici les étapes à suivre pour installer vos panneaux solaires en Wallonie :</p>
+<h2>Démarches administratives pas à pas (2026)</h2>
+<p>Voici les étapes à suivre pour installer vos panneaux solaires en Wallonie en 2026 :</p>
 <ol>
-<li><strong>Demander des devis</strong> — Comparez au moins 3 offres d'installateurs certifiés</li>
+<li><strong>Demander des devis</strong> — Comparez au moins 3 offres d'installateurs certifiés Rescert</li>
 <li><strong>Vérifier le permis d'urbanisme</strong> — En général non requis, sauf bâtiment classé</li>
 <li><strong>Signer le contrat</strong> — Avec l'installateur de votre choix</li>
 <li><strong>Installation</strong> — 1 à 2 jours de travaux en moyenne</li>
 <li><strong>Certification RGIE</strong> — Contrôle de conformité obligatoire</li>
-<li><strong>Demande de raccordement</strong> — Votre GRD installe le compteur communicant</li>
-<li><strong>Demande de certificats verts</strong> — Auprès de la CWaPE</li>
-<li><strong>Demande de Rénoprêt</strong> — Si applicable, auprès de la SWCS</li>
+<li><strong>Demande de raccordement</strong> — Votre GRD installe le compteur communicant double flux</li>
+<li><strong>Rénoprêt (optionnel)</strong> — Si éligible, démarches auprès de la SWCS (taux 0%)</li>
+<li><strong>Négocier un contrat d'injection</strong> — Auprès de votre fournisseur pour valoriser le surplus</li>
 </ol>
-
-<blockquote>Conseil : commencez par les démarches dès la signature du contrat. Certaines procédures prennent plusieurs semaines.</blockquote>
+<blockquote>Note : la demande de certificats verts auprès de la CWaPE n'est plus pertinente pour les nouvelles installations 2024+. La priorité : autoconsommation et bon contrat d'injection.</blockquote>
 `,
 
   'primes-panneaux-solaires-bruxelles-2025': `
@@ -175,29 +176,28 @@ export const guideContents: Record<string, string> = {
 
 <h2>Les systèmes de certificats verts par région</h2>
 
-<h3>Wallonie : la CWaPE</h3>
-<p>En Wallonie, le système est géré par la Commission Wallonne pour l'Énergie (CWaPE). Les caractéristiques principales sont :</p>
+<h3>Wallonie : suppression des CV pour nouvelles installations</h3>
+<p>En Wallonie, le régime de soutien aux nouvelles installations résidentielles a été supprimé depuis le 1er janvier 2024. Les caractéristiques actuelles pour les nouvelles installations :</p>
 <ul>
-<li><strong>Octroi :</strong> 1 CV par MWh produit</li>
-<li><strong>Durée :</strong> 10 ans à partir de la mise en service</li>
-<li><strong>Prix minimum garanti :</strong> 65€ par CV</li>
-<li><strong>Revente :</strong> à votre fournisseur d'énergie ou via la bourse aux CV</li>
-<li><strong>Puissance max :</strong> 10 kWc pour le résidentiel</li>
+<li><strong>Certificats verts :</strong> supprimés pour les nouvelles installations résidentielles (≤ 10 kWc)</li>
+<li><strong>Compteur réversible :</strong> supprimé depuis le 1er janvier 2024</li>
+<li><strong>Soutien actif :</strong> TVA 6%, Rénoprêt à 0%, autoconsommation + tarif d'injection</li>
+<li><strong>Installations avant 2024 :</strong> droits acquis maintenus selon les modalités d'origine</li>
 </ul>
-<p>Pour une installation de 6 kWc produisant 5 400 kWh/an, vous recevrez environ 5,4 CV par an, soit environ 350€ de revenus annuels pendant 10 ans.</p>
 
-<h3>Bruxelles : BRUGEL</h3>
-<p>Le système bruxellois, géré par BRUGEL, est le plus avantageux grâce au facteur de multiplication :</p>
+<h3>Bruxelles : BRUGEL (système actif en 2026)</h3>
+<p>Le système bruxellois, géré par BRUGEL, reste le plus avantageux. Depuis le 1er avril 2026, les taux sont :</p>
 <ul>
-<li><strong>Octroi :</strong> variable selon la puissance (facteur de multiplication)</li>
+<li><strong>Octroi (installations ≤ 5 kWc) :</strong> 2,055 CV/MWh — <em>inchangé au 1er avril 2026</em></li>
+<li><strong>Octroi (5–36 kWc) :</strong> 1,739 CV/MWh (ajusté depuis le 1er avril 2026)</li>
 <li><strong>Durée :</strong> 10 ans</li>
-<li><strong>Prix moyen :</strong> ~95€ par CV</li>
-<li><strong>Facteur 0-5 kWc :</strong> ~3,8 CV/MWh (très avantageux)</li>
-<li><strong>Facteur 5-10 kWc :</strong> ~2,5 CV/MWh</li>
+<li><strong>Prix moyen :</strong> ~85–95€ par CV</li>
+<li><strong>RESCert PV obligatoire :</strong> depuis le 1er janvier 2026</li>
+<li><strong>Installations > 100 kWc :</strong> aucun CV octroyé depuis le 1er avril 2026</li>
 </ul>
-<p>Le même système de 6 kWc à Bruxelles peut générer 800 à 1 400€ par an en certificats verts, soit 3 à 4 fois plus qu'en Wallonie.</p>
+<p>Pour une installation de 5 kWc à Bruxelles produisant ~4 300 kWh/an (4,3 MWh) : 4,3 × 2,055 = ~9 CV/an × 90€ = <strong>~810€ de revenus annuels en CV</strong> pendant 10 ans.</p>
 
-<h3>Flandre : suppression du système</h3>
+<h3>Flandre : aucun certificat vert</h3>
 <p>La Flandre a supprimé son système de certificats verts pour les nouvelles installations photovoltaïques. Le soutien passe désormais par le tarif d'injection et les prêts avantageux (MijnVerbouwLening).</p>
 
 <h2>Comment vendre vos certificats verts ?</h2>
@@ -212,10 +212,10 @@ export const guideContents: Record<string, string> = {
 <table>
 <thead><tr><th>Critère</th><th>Wallonie</th><th>Bruxelles</th><th>Flandre</th></tr></thead>
 <tbody>
-<tr><td>Système actif</td><td>Oui</td><td>Oui</td><td>Non</td></tr>
-<tr><td>Durée</td><td>10 ans</td><td>10 ans</td><td>-</td></tr>
-<tr><td>Revenus/an (6 kWc)</td><td>~350€</td><td>~1 100€</td><td>-</td></tr>
-<tr><td>Revenus sur 10 ans</td><td>~3 500€</td><td>~11 000€</td><td>-</td></tr>
+<tr><td>Système actif</td><td>Non (nouvelles install. depuis 2024)</td><td>Oui</td><td>Non</td></tr>
+<tr><td>Durée</td><td>- (droits acquis avant 2024 : 10 ans)</td><td>10 ans</td><td>-</td></tr>
+<tr><td>Revenus/an (5 kWc)</td><td>0€ (nouvelles install.)</td><td>~810€</td><td>-</td></tr>
+<tr><td>Revenus sur 10 ans</td><td>0€</td><td>~8 100€</td><td>-</td></tr>
 </tbody>
 </table>
 
@@ -249,9 +249,15 @@ export const guideContents: Record<string, string> = {
 </ul>
 <p>Vous payez le tarif plein pour l'électricité prélevée (~0,35€/kWh) et recevez un tarif d'injection pour l'électricité injectée (~0,03-0,05€/kWh). La différence est considérable et c'est pourquoi l'autoconsommation est devenue primordiale en Flandre.</p>
 
-<h3>Wallonie : le tarif prosumer</h3>
-<p>En Wallonie, le compteur bidirectionnel a été introduit avec le tarif prosumer. Vous pouvez encore bénéficier de la compensation (le compteur « tourne à l'envers »), mais vous payez un tarif forfaitaire annuel calculé sur base de la puissance nette développée de votre installation.</p>
-<p>Ce tarif prosumer varie selon votre gestionnaire de réseau (GRD) mais se situe en moyenne entre 350€ et 500€ par an pour une installation de 6 kWc. Il représente votre contribution aux frais d'utilisation du réseau de distribution.</p>
+<h3>Wallonie : le compteur communicant double flux (depuis 2024)</h3>
+<p>En Wallonie, le système a radicalement changé au <strong>1er janvier 2024</strong>. Le compteur réversible et le tarif prosumer ont été supprimés pour les nouvelles installations. Désormais :</p>
+<ul>
+<li><strong>Compteur double flux obligatoire :</strong> mesure séparément l'électricité injectée et prélevée</li>
+<li><strong>Pas de compensation :</strong> l'électricité injectée n'annule plus votre consommation</li>
+<li><strong>Tarif d'injection :</strong> ~3–6 ct€/kWh pour le surplus injecté sur le réseau</li>
+<li><strong>Autoconsommation = priorité absolue :</strong> chaque kWh autoconsommé vaut ~0,35€</li>
+</ul>
+<p>Les installations antérieures à 2024 conservent leurs droits acquis (certificats verts, tarif prosumer selon les conditions d'origine).</p>
 
 <h3>Bruxelles : le statu quo favorable</h3>
 <p>Bruxelles est la seule région qui maintient encore un système de compensation annuelle sans tarif prosumer. L'électricité injectée est déduite de votre consommation sur base annuelle, ce qui est très avantageux. Cependant, cette situation pourrait évoluer dans les années à venir.</p>

@@ -106,8 +106,8 @@ export default function Home() {
                 </tr>
                 <tr>
                   <td><strong>Certificats verts</strong></td>
-                  <td className="data-value">~450€/an</td>
-                  <td className="data-value">~800-1 400€/an</td>
+                  <td>Non (nouvelles inst. 2024+)</td>
+                  <td className="data-value">~810€/an (5 kWc)</td>
                   <td>Non</td>
                 </tr>
                 <tr>
@@ -124,8 +124,8 @@ export default function Home() {
                 </tr>
                 <tr>
                   <td><strong>Compensation réseau</strong></td>
-                  <td>Tarif prosumer</td>
-                  <td>Compteur réversible</td>
+                  <td>Autoconsommation + tarif injection</td>
+                  <td>Compensation annuelle</td>
                   <td>Tarif d&apos;injection</td>
                 </tr>
                 <tr>

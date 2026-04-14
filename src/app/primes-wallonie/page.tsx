@@ -30,11 +30,19 @@ export default function PrimesWalloniePage() {
         </h1>
 
         <div className="article">
-          <p>
-            En 2026, la Région Wallonne ne propose plus de prime directe à l&apos;installation de panneaux
-            photovoltaïques. Cependant, plusieurs mécanismes de soutien restent très avantageux pour les
-            propriétaires souhaitant investir dans le solaire.
+        <p>
+            En 2026, la Wallonie ne propose plus de prime directe ni de certificats verts pour les nouvelles installations de panneaux
+            photovoltaïques résidentielles. Depuis le <strong>1er janvier 2024</strong>, le système du compteur réversible
+            a été supprimé et les certificats verts ne sont plus octroyés aux nouvelles petites installations (≤ 10 kWc).
+            La rentabilité repose désormais entièrement sur l&apos;<strong>autoconsommation</strong> et le <strong>Rénoprêt à taux 0%</strong>.
           </p>
+          <div className="card card--region-wal" style={{ background: '#FEF2F2', border: '2px solid #FECACA', marginBottom: 24 }}>
+            <p style={{ fontWeight: 600, color: '#991B1B', marginBottom: 4 }}>⚠️ Information importante</p>
+            <p style={{ margin: 0, color: '#7F1D1D' }}>
+              Les certificats verts wallons et la réduction du tarif prosumer <strong>ne s&apos;appliquent plus aux installations mises
+              en service après le 31 décembre 2023</strong>. Si vous possédez déjà des panneaux (avant cette date), vos droits acquis sont maintenus.
+            </p>
+          </div>
 
           <h2>Les aides disponibles en Wallonie</h2>
 
@@ -49,7 +57,7 @@ export default function PrimesWalloniePage() {
             ))}
           </div>
 
-          <h2>Le Rénoprêt : un prêt à taux zéro</h2>
+          <h2>Le Rénoprêt : votre levier principal</h2>
           <p>
             Le Rénoprêt est proposé par la Société Wallonne du Crédit Social (SWCS). Il permet de financer
             vos travaux de rénovation énergétique, y compris l&apos;installation de panneaux solaires, avec un
@@ -62,16 +70,21 @@ export default function PrimesWalloniePage() {
             professionnel agréé.
           </p>
 
-          <h2>Les certificats verts wallons</h2>
+          <h2>Qu&apos;est-il arrivé aux certificats verts wallons ?</h2>
           <p>
-            Le système de certificats verts wallon attribue 1 certificat vert (CV) pour chaque MWh
-            d&apos;électricité verte produite par votre installation. La durée d&apos;octroi est de 10 ans
-            à partir de la mise en service.
+            Le système de certificats verts pour les petites installations résidentielles (≤ 10 kWc) a été
+            progressivement démantélé. Depuis le <strong>1er janvier 2024</strong> (source : CWaPE / energie.wallonie.be) :
           </p>
+          <ul>
+            <li>Les nouvelles installations ne bénéficient <strong>plus de certificats verts</strong></li>
+            <li>Le <strong>compteur qui tourne à l&apos;envers</strong> est supprimé pour les nouvelles installations</li>
+            <li>Le <strong>tarif prosumer</strong> et la prime au compteur double flux ont pris fin le 31/12/2023</li>
+            <li>Les installations <strong>antérieures à fin 2023</strong> conservent leurs droits acquis</li>
+          </ul>
           <p>
-            La valeur d&apos;un certificat vert wallon est d&apos;environ 65€. Pour une installation
-            résidentielle typique de 6 kWc, cela représente environ 450€ par an de revenus
-            complémentaires.
+            La rentabilité repose donc entièrement sur l&apos;<strong>autoconsommation</strong>
+            (chaque kWh autoconsommé = ~0,35€ évité) et le tarif d&apos;injection pour le surplus
+            injecté (~3–6 ct€/kWh selon fournisseur).
           </p>
 
           <h2>La TVA à 6% pour les logements de plus de 10 ans</h2>
@@ -81,15 +94,18 @@ export default function PrimesWalloniePage() {
             cela représente une économie d&apos;environ 1 200€.
           </p>
 
-          <h2>Le tarif prosumer</h2>
+          <h2>Rentabilité : l&apos;autoconsommation comme clé de voûte</h2>
           <p>
-            Depuis 2020, les propriétaires de panneaux solaires en Wallonie doivent payer le tarif
-            prosumer. Ce tarif est calculé sur base de la puissance de votre installation et vise à
-            couvrir les frais d&apos;utilisation du réseau de distribution.
+            Sans certificats verts, la rentabilité des panneaux solaires en Wallonie repose sur deux leviers :
           </p>
+          <ul>
+            <li><strong>Autoconsommation</strong> : utiliser sa propre production (0h–16h) pour alimenter ses appareils. Valeur : ~0,35€/kWh évités.</li>
+            <li><strong>Tarif d&apos;injection</strong> : valoriser le surplus injecté en prénégociant un contrat avec votre fournisseur (~3–6 ct€/kWh).</li>
+          </ul>
           <p>
-            Pour une installation de 6 kWc, le tarif prosumer s&apos;élève à environ 350-500€ par an.
-            Ce coût est partiellement compensé par les revenus des certificats verts.
+            Pour une installation bien dimensionnée de 5–6 kWc avec 60% d&apos;autoconsommation, les économies annuelles estimées
+            se situent entre <strong>800€ et 1 200€/an</strong>, soit un retour sur investissement de
+            <strong>8 à 10 ans</strong>. La TVA à 6% réduit le coût initial d&apos;environ 1 200€.
           </p>
 
           <h2>Conditions d&apos;éligibilité</h2>

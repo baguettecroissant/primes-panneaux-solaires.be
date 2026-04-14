@@ -4,8 +4,8 @@ import { primesByRegion } from "@/data/primes";
 import communes from "@/data/communes-be.json";
 
 export const metadata: Metadata = {
-  title: "Primes Panneaux Solaires Bruxelles 2026 — Guide Complet",
-  description: "Guide complet des aides à Bruxelles pour vos panneaux solaires : certificats verts Brugel, prêt Ecoreno, primes communales. Conditions et montants 2026.",
+  title: "Primes Panneaux Solaires Bruxelles 2026 — Certificats Verts BRUGEL & Aides",
+  description: "Guide complet des aides à Bruxelles pour vos panneaux solaires : certificats verts BRUGEL (2,055 CV/MWh), prêt Ecoreno, RESCert obligatoire. Conditions et montants 2026.",
 };
 
 export default function PrimesBruxellesPage() {
@@ -25,11 +25,25 @@ export default function PrimesBruxellesPage() {
         <h1 style={{ marginTop: 12 }}>Primes panneaux solaires Bruxelles 2026 : guide complet</h1>
 
         <div className="article">
-          <p>La Région de Bruxelles-Capitale offre le système de certificats verts le plus avantageux de Belgique. Bien qu&apos;il n&apos;y ait pas de prime directe, le mécanisme de certificats verts Brugel permet un retour sur investissement excellent.</p>
+          <p>La Région de Bruxelles-Capitale maintient en 2026 le système de certificats verts BRUGEL, le plus avantageux de Belgique. Contrairement à la Wallonie qui a supprimé ses CV pour les nouvelles installations depuis 2024, Bruxelles préserve ce mécanisme tout en l&apos;adaptant régulièrement. Attention aux nouvelles règles en vigueur depuis 2026.</p>
 
-          <h2>Les certificats verts Brugel</h2>
-          <p>Le système bruxellois de certificats verts est géré par BRUGEL, le régulateur du marché de l&apos;énergie. Pour chaque MWh d&apos;électricité verte produite, vous recevez des certificats verts que les fournisseurs d&apos;énergie sont obligés de racheter.</p>
-          <p>Le facteur de multiplication varie selon la puissance de votre installation, rendant le système particulièrement avantageux pour les installations résidentielles de petite à moyenne taille. Pour une installation de 6 kWc, les revenus annuels se situent entre 800€ et 1 400€.</p>
+          <div className="card card--region-bxl" style={{ background: '#F5F3FF', border: '2px solid #DDD6FE', marginBottom: 24 }}>
+            <p style={{ fontWeight: 600, color: '#5B21B6', marginBottom: 4 }}>ℹ️ Nouveautés 2026 à Bruxelles</p>
+            <ul style={{ margin: 0, color: '#4C1D95', paddingLeft: 20 }}>
+              <li><strong>Depuis le 1er janvier 2026</strong> : certification <strong>RESCert PV</strong> obligatoire pour l&apos;installateur (toutes nouvelles installations)</li>
+              <li><strong>Depuis le 1er avril 2026</strong> : taux maintenu à <strong>2,055 CV/MWh</strong> pour les installations ≤ 5 kWc (résidentiel typique)</li>
+              <li>Installations &gt; 100 kWc : aucun certificat vert octroyé</li>
+            </ul>
+          </div>
+
+          <h2>Les certificats verts BRUGEL : le système actif en 2026</h2>
+          <p>Le système bruxellois de certificats verts est géré par BRUGEL, le régulateur de l&apos;énergie. Pour chaque MWh d&apos;électricité verte produite, vous recevez des certificats verts que les fournisseurs d&apos;énergie sont obligés de racheter.</p>
+          <p>
+            Depuis le <strong>1er avril 2026</strong>, le taux d&apos;octroi pour les <strong>installations résidentielles ≤ 5 kWc</strong> est de
+            <strong> 2,055 CV/MWh</strong> — <em>inchangé par rapport à la période précédente</em>. Pour une installation
+            de 5 kWc produisant ~4 300 kWh/an (4,3 MWh), cela représente environ 8 à 9 CV par an,
+            soit <strong>700€ à 1 000€ de revenus annuels</strong> sur 10 ans (prix CV ~85–95€).
+          </p>
 
           <h2>Le prêt Ecoreno</h2>
           <p>Le prêt vert Ecoreno permet de financer vos travaux d&apos;efficacité énergétique, y compris l&apos;installation de panneaux solaires. Le montant maximum est de 25 000€ à un taux avantageux.</p>

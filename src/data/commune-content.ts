@@ -28,7 +28,7 @@ const INTROS: ((c: CommuneEnriched) => string)[] = [
 
   (c) => `Les propriétaires de ${c.name} ont une opportunité concrète de réduire leur empreinte carbone tout en améliorant la valeur de leur bien immobilier. Une installation photovoltaïque de 6 kWc y produit en moyenne ${c.productionAnnuelle6kWc.toLocaleString("fr-BE")} kWh/an, couvrant l'essentiel de la consommation d'un foyer de 4 personnes.`,
 
-  (c) => `${c.name} (${c.postCode}) fait partie des communes ${c.region === "bruxelles" ? "bruxelloises éligibles au système de certificats verts BRUGEL" : "wallonnes couvertes par les certificats verts CWaPE et le Rénoprêt"}. Pour un ménage moyen, cela représente un gain net estimé à ${c.economieAnnuelle.toLocaleString("fr-BE")}€ par an après installation.`,
+  (c) => `${c.name} (${c.postCode}) fait partie des communes ${c.region === "bruxelles" ? "bruxelloises éligibles au système de certificats verts BRUGEL (actif en 2026)" : "wallonnes couvertes par le Rénoprêt à taux 0% et la TVA à 6% — les certificats verts ont été supprimés pour les nouvelles installations depuis janvier 2024"}. Pour un ménage moyen, l'économie annuelle estimée est de ${c.economieAnnuelle.toLocaleString("fr-BE")}€ après installation.`,
 
   (c) => `Le marché du solaire résidentiel est en plein essor à ${c.name}. Avec un coût moyen passé sous la barre des 1 500€/kWc et un retour sur investissement de ${c.roiAnnees} ans dans votre commune, les panneaux photovoltaïques s'imposent comme la solution énergétique la plus accessible pour les ${c.population.toLocaleString("fr-BE")} habitants.`,
 
@@ -67,9 +67,9 @@ export function generateSectionGRD(c: CommuneEnriched): string {
     return `À ${c.name}, votre gestionnaire de réseau de distribution est **Sibelga**. C'est Sibelga qui gère le raccordement de votre installation photovoltaïque au réseau, l'installation du compteur bidirectionnel et le suivi de votre production. La demande de raccordement se fait directement via le portail Sibelga. En Région bruxelloise, le système de compensation nette est encore en vigueur : l'électricité injectée sur le réseau est déduite de votre consommation sur base annuelle.`;
   }
   if (grd.nom === "RESA") {
-    return `En province de Liège, votre gestionnaire de réseau est **RESA** (anciennement REW). RESA assure le raccordement de votre installation, la pose du compteur communicant et le relevé de votre production. Vous devez introduire votre demande de raccordement avant l'installation. RESA est aussi l'interlocuteur pour les questions relatives au tarif prosumer applicable en Wallonie. Pour ${c.name}, les délais de raccordement sont généralement de 4 à 8 semaines après la mise en service.`;
+    return `En province de Liège, votre gestionnaire de réseau est **RESA** (anciennement REW). RESA assure le raccordement de votre installation, la pose du compteur double flux et le relevé de votre production. Vous devez introduire votre demande de raccordement avant l'installation. Pour ${c.name}, les délais de raccordement sont généralement de 4 à 8 semaines après la mise en service. Note : depuis le 1er janvier 2024, les nouvelles installations wallonnes ne bénéficient plus des certificats verts — la rentabilité repose sur l'autoconsommation et le tarif d'injection.`;
   }
-  return `À ${c.name}, votre gestionnaire de réseau de distribution est **ORES**. ORES couvre la majorité des communes wallonnes et gère le raccordement de votre installation photovoltaïque, l'installation du compteur double flux et le suivi de votre production. La procédure de demande de raccordement se fait en ligne via le portail ORES. En Wallonie, le compteur communicant est obligatoire pour toute nouvelle installation. Le tarif prosumer, calculé sur base de votre puissance installée, est partiellement compensé par les revenus des certificats verts.`;
+  return `À ${c.name}, votre gestionnaire de réseau de distribution est **ORES**. ORES couvre la majorité des communes wallonnes et gère le raccordement de votre installation photovoltaïque, l'installation du compteur double flux et le suivi de votre production. La procédure de demande de raccordement se fait en ligne via le portail ORES. En Wallonie (nouvelles installations depuis jan. 2024), la rentabilité repose sur l'autoconsommation et le tarif d'injection — les certificats verts ne sont plus octroyés aux nouvelles installations résidentielles.`;
 }
 
 /* ─── SECTION LE SAVIEZ-VOUS (par province/habitat) ─── */
@@ -87,11 +87,11 @@ const SAVIEZ_VOUS_POOL: ((c: CommuneEnriched) => string)[] = [
 
   (c) => `La Belgique compte plus de 700 000 installations photovoltaïques résidentielles. En ${c.province || "Région bruxelloise"}, le taux d'équipement progresse de 12% par an. ${c.name} suit cette tendance grâce aux conditions de financement avantageuses.`,
 
-  (c) => `L'autoconsommation est la clé de la rentabilité solaire à ${c.name}. En consommant directement l'électricité produite (lave-linge, chauffe-eau, véhicule électrique), vous évitez le tarif prosumer et maximisez votre économie. L'installation d'une batterie domestique peut porter l'autoconsommation de 30% à plus de 70%.`,
+  (c) => `L'autoconsommation est la clé de la rentabilité solaire à ${c.name}${c.region === "wallonie" ? ", surtout depuis la suppression des certificats verts pour les nouvelles installations en 2024" : ""}. En consommant directement l'électricité produite (lave-linge, chauffe-eau, véhicule électrique), vous maximisez votre économie. L'installation d'une batterie domestique peut porter l'autoconsommation de 30% à plus de 70%.`,
 
   (c) => `Votre commune de ${c.name} est raccordée au réseau de distribution de ${c.grd.nom}. Ce gestionnaire assure la qualité de la tension et la fiabilité du réseau local. En cas de surplus de production solaire, l'énergie est réinjectée proprement dans le réseau pour alimenter vos voisins.`,
 
-  (c) => `${c.region === "bruxelles" ? "À Bruxelles, le système de certificats verts BRUGEL est l'un des plus avantageux d'Europe. Pour une installation de 5 kWc, vous pouvez recevoir jusqu'à 1 400€ de certificats verts par an pendant 10 ans." : "En Wallonie, les certificats verts CWaPE sont attribués pour une durée de 10 ans. Pour une installation de 6 kWc à " + c.name + ", cela représente environ 450€ de revenus annuels supplémentaires."}`,
+  (c) => `${c.region === "bruxelles" ? "À Bruxelles, le système de certificats verts BRUGEL reste actif en 2026 : 2,055 CV/MWh pour les installations ≤ 5 kWc. Pour une installation de 5 kWc, cela représente ~700 à 1 000€ de revenus annuels pendant 10 ans." : "En Wallonie, les certificats verts ont été supprimés pour les nouvelles installations résidentielles depuis le 1er janvier 2024 (source : CWaPE). La rentabilité à " + c.name + " repose désormais sur l'autoconsommation (~0,35€/kWh évité) et le Rénoprêt à taux 0%."}`,
 
   (c) => `La neige sur les panneaux solaires ? À ${c.name}, la couverture neigeuse ne dépasse en moyenne que 15 à 20 jours par an. L'impact sur la production annuelle est inférieur à 2%. De plus, les panneaux inclinés se déneigent naturellement grâce à leur surface lisse et à la chaleur résiduelle des cellules.`,
 ];
@@ -106,7 +106,7 @@ interface FAQItem {
 const FAQ_POOL: ((c: CommuneEnriched) => FAQItem)[] = [
   (c) => ({
     question: `Quelles sont les aides financières pour le solaire à ${c.name} ?`,
-    answer: `Les habitants de ${c.name} (${c.postCode}) ont accès à ${c.region === "bruxelles" ? "des certificats verts BRUGEL très avantageux (jusqu'à 1 400€/an pour 6 kWc), au prêt vert Ecoreno (max 25 000€ à taux réduit), et potentiellement à des primes communales supplémentaires" : "des certificats verts CWaPE (~450€/an pour 6 kWc), au Rénoprêt à taux 0% (max 60 000€), et à la TVA réduite à 6% pour les logements de plus de 10 ans"}. Le cumul de ces aides réduit significativement votre investissement initial.`,
+    answer: `Les habitants de ${c.name} (${c.postCode}) ont accès à ${c.region === "bruxelles" ? "des certificats verts BRUGEL (2,055 CV/MWh pour ≤ 5 kWc, soit ~700–1 000€/an), au prêt vert Ecoreno (max 25 000€ à taux réduit), et potentiellement à des primes communales supplémentaires" : "au Rénoprêt à taux 0% (max 60 000€), à la TVA réduite à 6% pour les logements de plus de 10 ans, et à un tarif d'injection négocié avec leur fournisseur pour l'électricité injectée — les CV sont supprimés pour les nouvelles installations wallonnes depuis jan. 2024"}. La priorité est de maximiser l'autoconsommation pour rentabiliser votre installation.`,
   }),
 
   (c) => ({
@@ -116,7 +116,7 @@ const FAQ_POOL: ((c: CommuneEnriched) => FAQItem)[] = [
 
   (c) => ({
     question: `Quel est le retour sur investissement du solaire à ${c.name} ?`,
-    answer: `À ${c.name}, le retour sur investissement moyen pour une installation de 6 kWc est de **${c.roiAnnees} ans**, en tenant compte des aides régionales, de l'économie sur votre facture (~${c.economieAnnuelle.toLocaleString("fr-BE")}€/an) et des revenus des certificats verts. Après cette période, l'électricité produite est gratuite pendant encore 17 à 20 ans (durée de vie garantie des panneaux : 25 ans minimum).`,
+    answer: `À ${c.name}, le retour sur investissement moyen pour une installation de 6 kWc est de **${c.roiAnnees} ans**, en tenant compte des aides régionales disponibles ${c.region === "bruxelles" ? "(certificats verts BRUGEL + compensation réseau)" : "(Rénoprêt, TVA 6%, autoconsommation)"} et de l'économie sur votre facture (~${c.economieAnnuelle.toLocaleString("fr-BE")}€/an). Après cette période, l'électricité produite est gratuite pendant encore 17 à 20 ans (durée de vie garantie des panneaux : 25 ans minimum).`,
   }),
 
   (c) => ({
@@ -151,7 +151,7 @@ const FAQ_POOL: ((c: CommuneEnriched) => FAQItem)[] = [
 
   (c) => ({
     question: `Comment choisir un installateur de panneaux solaires à ${c.name} ?`,
-    answer: `Pour votre installation à ${c.name}, privilégiez un installateur **certifié ${c.region === "bruxelles" ? "agréé par la Région bruxelloise (obligatoire pour les certificats verts BRUGEL)" : "Rescert (label obligatoire en Wallonie pour bénéficier des certificats verts CWaPE)"}**. Comparez systématiquement au moins 3 devis. Vérifiez : l'ancienneté de l'entreprise, les avis clients, la garantie décennale, et le SAV proposé. Les installateurs locaux de la zone ${c.postCode} connaissent les spécificités du réseau ${c.grd.nom} et les démarches administratives locales.`,
+    answer: `Pour votre installation à ${c.name}, privilégiez un installateur **certifié ${c.region === "bruxelles" ? "RESCert PV agréé par la Région bruxelloise (obligatoire depuis jan. 2026 pour les certificats verts BRUGEL)" : "Rescert (label recommandé en Wallonie)"}**. Comparez systématiquement au moins 3 devis. Vérifiez : l'ancienneté de l'entreprise, les avis clients, la garantie décennale, et le SAV proposé. Les installateurs locaux de la zone ${c.postCode} connaissent les spécificités du réseau ${c.grd.nom} et les démarches administratives locales.`,
   }),
 ];
 
